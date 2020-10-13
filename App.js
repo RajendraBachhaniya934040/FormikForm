@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import HelloForm from './src/components/SignUp';
+import AddQuestions from './src/components/AddQuestions';
 import FiledArray from './src/components/SignUp';
 import FormikForm from './src/components/FormikForm';
 

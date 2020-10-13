@@ -1,11 +1,9 @@
 import React from 'react';
 import {View, TextInput, Text} from 'react-native';
-import {isEmpty} from 'lodash';
 
 import styles from './styles';
 
-const Filed = ({label, touched, error, ...props}) => {
-console.log('gahghas',error, touched)
+const Field = ({label, touched, error, ...props}) => {
   return (
     <View style={{marginVertical: 5}}>
       <Text>{label}</Text>
@@ -17,4 +15,4 @@ console.log('gahghas',error, touched)
   );
 };
 
-export default Filed;
+export default Field;

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, Button, ScrollView, TouchableOpacity} from 'react-native';
 import {Formik} from 'formik';
 
-import Filed from '../../common';
+import Field from '../../common';
 import {validate} from '../../utils/validate';
 import styles from './styles';
 
@@ -12,7 +12,7 @@ const FormiKForm = () => {
 
   const addMoreFields = ({label, onChangeText, values}) => {
     addMore.push(
-      <Filed values={values} label={label} onChangeText={onChangeText} />,
+      <Field values={values} label={label} onChangeText={onChangeText} />,
     );
   };
 
@@ -43,7 +43,7 @@ const FormiKForm = () => {
               return (
                 <>
                   <View>
-                    <Filed
+                    <Field
                       onChangeText={handleChange('username')}
                       onBlur={handleBlur('username')}
                       value={values.username}
@@ -51,7 +51,7 @@ const FormiKForm = () => {
                       touched={touched.username}
                       error={errors.username}
                     />
-                    <Filed
+                    <Field
                       onChangeText={handleChange('email')}
                       onBlur={handleBlur('email')}
                       value={values.email}
@@ -59,7 +59,7 @@ const FormiKForm = () => {
                       touched={touched.email}
                       error={errors.email}
                     />
-                    <Filed
+                    <Field
                       onChangeText={handleChange('phone')}
                       onBlur={handleBlur('phone')}
                       value={values.phone}
@@ -69,7 +69,7 @@ const FormiKForm = () => {
                       keyboardType="numeric"
                       maxLength={10}
                     />
-                    <Filed
+                    <Field
                       onChangeText={handleChange('address')}
                       onBlur={handleBlur('address')}
                       value={values.address}
@@ -144,7 +144,7 @@ const FormiKForm = () => {
                         </TouchableOpacity>
                       )}
                     </View>
-                    <Filed
+                    <Field
                       onChangeText={handleChange('password')}
                       onBlur={handleBlur('password')}
                       value={values.password}

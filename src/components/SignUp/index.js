@@ -1,8 +1,8 @@
 import React from 'react';
-import {View, Text, Button, ScrollView} from 'react-native';
+import {Text, Button, ScrollView} from 'react-native';
 import {Formik} from 'formik';
 
-import Filed from '../../common/index';
+import Field from '../../common/index';
 import {signUpValidationSchema} from '../../utils/validate';
 import styles from '../AddQuestions/styles';
 
@@ -30,7 +30,7 @@ const FieldArray = () => {
           errors,
         }) => (
           <>
-            <Filed
+            <Field
               onChangeText={handleChange('fullName')}
               onBlur={handleBlur('fullName')}
               value={values.fullName}
@@ -38,7 +38,7 @@ const FieldArray = () => {
               touched={touched.fullName}
               error={errors.fullName}
             />
-            <Filed
+            <Field
               onChangeText={handleChange('email')}
               onBlur={handleBlur('email')}
               value={values.email}
@@ -47,7 +47,7 @@ const FieldArray = () => {
               error={errors.email}
             />
 
-            <Filed
+            <Field
               onChangeText={handleChange('phoneNumber')}
               onBlur={handleBlur('phoneNumber')}
               value={values.phoneNumber}
@@ -57,7 +57,7 @@ const FieldArray = () => {
               keyboardType="numeric"
               maxLength={10}
             />
-            <Filed
+            <Field
               onChangeText={handleChange('password')}
               onBlur={handleBlur('password')}
               value={values.password}
@@ -66,7 +66,7 @@ const FieldArray = () => {
               error={errors.password}
               secureTextEntry
             />
-            <Filed
+            <Field
               onChangeText={handleChange('confirmPassword')}
               onBlur={handleBlur('confirmPassword')}
               value={values.confirmPassword}

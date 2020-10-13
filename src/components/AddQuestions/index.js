@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {Button, Text, View} from 'react-native';
 
 import {schema} from '../../utils/validate';
-import Filed from '../../common';
+import Field from '../../common';
 import styles from './styles';
 
 const AddQuestions = () => {
@@ -29,7 +29,7 @@ const AddQuestions = () => {
             {values.questions.map(({text, counter}, index) => {
               return (
                 <>
-                  <Filed
+                  <Field
                     key={counter}
                     onChangeText={handleChange(`questions[${index}].text`)}
                     onBlur={handleBlur(`questions[${index}].text`)}
